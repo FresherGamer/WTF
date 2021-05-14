@@ -15,6 +15,7 @@
 
 <body>
   <script type="text/javascript">
+    let kekratio = 1
     let moneyB = 100
     let moneyR = 100
 
@@ -22,12 +23,12 @@
     let spawners = []
 
     const styleB = new PIXI.TextStyle({fill: "#2F80ED",
-     fontSize: 50*window.devicePixelRatio,
+     fontSize: 50*kekRatio,
     fontFamily: "Tahoma",  fontWeight: "bold"});
     const textB = new PIXI.Text(moneyB+'$', styleB);
 
     const styleR = new PIXI.TextStyle({fill: "#D24B4B",
-     fontSize: 50*window.devicePixelRatio,
+     fontSize: 50*kekRatio,
     fontFamily: "Tahoma",  fontWeight: "bold"});
     const textR = new PIXI.Text(moneyR+'$', styleR);
 
@@ -36,8 +37,8 @@
     let units = []
     let line = 0
     //реальнные размеры экрана
-    const realHeight = window.innerHeight * window.devicePixelRatio
-    const realWidth = window.innerWidth * window.devicePixelRatio
+    const realHeight = window.innerHeight * kekRatio
+    const realWidth = window.innerWidth * kekRatio
 
     let app = new PIXI.Application({
       width: realWidth,
@@ -118,8 +119,8 @@
       
       
       for (i in sprites) {
-        sprites[i].height *= window.devicePixelRatio
-        sprites[i].width *= window.devicePixelRatio
+        sprites[i].height *= kekRatio
+        sprites[i].width *= kekRatio
       }
 
       line = sprites.line
@@ -133,12 +134,12 @@
       interFaceB.addChild(sprites.addB)
 
       app.stage.addChild(textB)
-      interFaceB.y = realHeight - 200*window.devicePixelRatio - 100
+      interFaceB.y = realHeight - 200*kekRatio - 100
       interFaceB.x = 100
       sprites.mbB.x += sprites.mbB.width+100
-      sprites.mbB.y -= 50*window.devicePixelRatio
+      sprites.mbB.y -= 50*kekRatio
       sprites.spawnB.x += sprites.mbB.width*2+200
-      sprites.spawnB.y -= 50*window.devicePixelRatio
+      sprites.spawnB.y -= 50*kekRatio
       
   
       textB.x = realWidth/2
@@ -199,14 +200,14 @@
           spawnMoneyBuilderB()
          function spawnMoneyBuilderB() {
            let builder = new PIXI.Sprite(resSprite.mbsB.texture);
-           builder.height *= window.devicePixelRatio
-           builder.width *= window.devicePixelRatio
+           builder.height *= kekRatio
+           builder.width *= kekRatio
            builder.team = 'B'
            builder.x = getRandomInt(builder.width, window.innerWidth*devicePixelRatio - builder.width)
-           builder.y = getRandomInt(line.y+line.height*window.devicePixelRatio+100*window.devicePixelRatio, realHeight-300*window.devicePixelRatio)
+           builder.y = getRandomInt(line.y+line.height*kekRatio+100*kekRatio, realHeight-300*kekRatio)
            while (CheckCollision(builder.x, builder.y, builder.width, builder.height) != false) {  
             builder.x = getRandomInt(builder.width, window.innerWidth*devicePixelRatio - builder.width)
-           builder.y = getRandomInt(line.y+line.height*window.devicePixelRatio+100*window.devicePixelRatio, realHeight-300*window.devicePixelRatio)
+           builder.y = getRandomInt(line.y+line.height*kekRatio+100*kekRatio, realHeight-300*kekRatio)
           
            }
            console.log(builder.y)
@@ -227,14 +228,14 @@
           spawnMoneyBuilderR()
          function spawnMoneyBuilderR() {
            let builder = new PIXI.Sprite(resSprite.mbsR.texture);
-           builder.height *= window.devicePixelRatio
-           builder.width *= window.devicePixelRatio
+           builder.height *= kekRatio
+           builder.width *= kekRatio
            builder.team = 'R'
            builder.x = getRandomInt(builder.width, window.innerWidth*devicePixelRatio - builder.width)
-           builder.y = getRandomInt(300*window.devicePixelRatio, line.y-100*window.devicePixelRatio)
+           builder.y = getRandomInt(300*kekRatio, line.y-100*kekRatio)
            while (CheckCollision(builder.x, builder.y, builder.width, builder.height) != false) {  
             builder.x = getRandomInt(builder.width, window.innerWidth*devicePixelRatio - builder.width)
-           builder.y = getRandomInt(300*window.devicePixelRatio, line.y-100*window.devicePixelRatio)
+           builder.y = getRandomInt(300*kekRatio, line.y-100*kekRatio)
            }
            console.log(builder.y)
            builders.push(builder)
@@ -254,15 +255,15 @@
           spawnSpawnerR()
          function spawnSpawnerR() {
            let spawner = new PIXI.Sprite(resSprite.spwR.texture);
-           spawner.height *= window.devicePixelRatio
-           spawner.width *= window.devicePixelRatio
+           spawner.height *= kekRatio
+           spawner.width *= kekRatio
            spawner.team = 'R'
            spawner.time = 180
            spawner.x = getRandomInt(spawner.width, window.innerWidth*devicePixelRatio - spawner.width)
-           spawner.y = getRandomInt(300*window.devicePixelRatio, line.y-100*window.devicePixelRatio)
+           spawner.y = getRandomInt(300*kekRatio, line.y-100*kekRatio)
            while (CheckCollision(spawner.x, spawner.y, spawner.width, spawner.height) != false) { 
             spawner.x = getRandomInt(spawner.width, window.innerWidth*devicePixelRatio - spawner.width)
-           spawner.y = getRandomInt(300*window.devicePixelRatio, line.y-100*window.devicePixelRatio)
+           spawner.y = getRandomInt(300*kekRatio, line.y-100*kekRatio)
            }
 
            spawners.push(spawner)
@@ -281,16 +282,16 @@
           spawnSpawnerB()
          function spawnSpawnerB() {
            let spawner = new PIXI.Sprite(resSprite.spwB.texture);
-           spawner.height *= window.devicePixelRatio
-           spawner.width *= window.devicePixelRatio
+           spawner.height *= kekRatio
+           spawner.width *= kekRatio
            spawner.team = 'B'
            spawner.time = 180
            
            spawner.x = getRandomInt(spawner.width, window.innerWidth*devicePixelRatio - spawner.width)
-           spawner.y = getRandomInt(line.y+line.height*window.devicePixelRatio+100*window.devicePixelRatio, realHeight-300*window.devicePixelRatio)
+           spawner.y = getRandomInt(line.y+line.height*kekRatio+100*kekRatio, realHeight-300*kekRatio)
            while (CheckCollision(spawner.x, spawner.y, spawner.width, spawner.height) != false) {
             spawner.x = getRandomInt(spawner.width, window.innerWidth*devicePixelRatio - spawner.width)
-            spawner.y = getRandomInt(line.y+line.height*window.devicePixelRatio+100*window.devicePixelRatio, realHeight-300*window.devicePixelRatio)
+            spawner.y = getRandomInt(line.y+line.height*kekRatio+100*kekRatio, realHeight-300*kekRatio)
            }
            spawners.push(spawner)
            unitsScene.addChild(spawners[spawners.length-1])
@@ -354,8 +355,8 @@
     function createShipR() {
       let obj = {}
       obj = new PIXI.Sprite(resSprite.shipR.texture);
-      obj.height *= window.devicePixelRatio
-      obj.width *= window.devicePixelRatio
+      obj.height *= kekRatio
+      obj.width *= kekRatio
       return obj
     }
 
@@ -376,8 +377,8 @@
     function createShipB() {
       let obj = {}
       obj = new PIXI.Sprite(resSprite.shipB.texture);
-      obj.height *= window.devicePixelRatio
-      obj.width *= window.devicePixelRatio
+      obj.height *= kekRatio
+      obj.width *= kekRatio
 
 
       return obj
@@ -463,12 +464,12 @@
         units[i].speedY += units[i].ay
         if (units[i].y+20 <= line.y+line.height && units[i].speedY < 0) {
           unitsScene.removeChild(units[i])
-          line.y -= 10*window.devicePixelRatio
+          line.y -= 10*kekRatio
           units.splice(i,1)
         } else {
           if (units[i].y+units[i].height-20 >= line.y && units[i].speedY > 0) {
           unitsScene.removeChild(units[i])
-          line.y += 10*window.devicePixelRatio
+          line.y += 10*kekRatio
           units.splice(i,1)
         }
         }
@@ -482,7 +483,7 @@
         console.log("game Over")
 
         const finallyR = new PIXI.TextStyle({fill: "#2F80ED",
-        fontSize: 200*window.devicePixelRatio,
+        fontSize: 200*kekRatio,
         fontFamily: "Tahoma",  fontWeight: "bold"});
 
         let finaly = new PIXI.Text('BLUE WIN', finallyR);
@@ -507,7 +508,7 @@
         console.log("game Over")
 
         const finallyR = new PIXI.TextStyle({fill: "#D24B4B",
-        fontSize: 200*window.devicePixelRatio,
+        fontSize: 200*kekRatio,
         fontFamily: "Tahoma",  fontWeight: "bold"});
 
         let finaly = new PIXI.Text('RED WIN', finallyR);
