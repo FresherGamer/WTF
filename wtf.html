@@ -172,20 +172,20 @@
        sprites.addB.interactive = true 
        sprites.addB.buttonMode = true 
        sprites.addB.on('pointerdown', ()=>{
-        if (moneyB - 3 < 0) {
+        if (moneyB - 1 < 0) {
             return
           }
-          moneyB -= 3
+          moneyB -= 1
          spawnShipB()
         })
 
         sprites.addR.interactive = true 
         sprites.addR.buttonMode = true
         sprites.addR.on('pointerdown', ()=>{
-          if (moneyR - 3 < 0) {
+          if (moneyR - 1 < 0) {
             return
           }
-          moneyR -= 3
+          moneyR -= 1
          spawnShipR()
         })
 
