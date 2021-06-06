@@ -47,13 +47,8 @@ const $html = document.documentElement;
     const realWidth = window.clientWidth * window.devicePixelRatio
 
     let app = new PIXI.Application({
-<<<<<<< HEAD
       width: window.clientWidth,
       height: window.clientHeight,
-=======
-      width: window.innerWidth,
-      height: window.innerHeight,
->>>>>>> parent of d375a52 (Revert "Update wtf.html")
       transparent: true,
       resolution: 1
     });
@@ -62,13 +57,8 @@ const $html = document.documentElement;
     app.view.style.imageRendering = 'pixelated'
  
     //подгон под реальный размер css
-<<<<<<< HEAD
    // app.view.style.width = `${window.clientWidth}px`
     // app.view.style.height = `${window.clientHeight}px`
-=======
-   // app.view.style.width = `${window.innerWidth}px`
-    // app.view.style.height = `${window.innerHeight}px`
->>>>>>> parent of d375a52 (Revert "Update wtf.html")
  
     //Add the canvas that Pixi automatically created for you to the HTML document
     document.body.appendChild(app.view);
@@ -140,11 +130,7 @@ const $html = document.documentElement;
       // }
 
       line = sprites.line
-<<<<<<< HEAD
       line.y = window.clientHeight/2-line.height/2
-=======
-      line.y = window.innerHeight/2-line.height/2
->>>>>>> parent of d375a52 (Revert "Update wtf.html")
       app.stage.addChild(line)
       
 
@@ -154,11 +140,7 @@ const $html = document.documentElement;
       interFaceB.addChild(sprites.addB)
 
       app.stage.addChild(textB)
-<<<<<<< HEAD
       interFaceB.y = window.clientHeight - 200*1.0000000 - 100
-=======
-      interFaceB.y = window.innerHeight - 200*1.0000000 - 100
->>>>>>> parent of d375a52 (Revert "Update wtf.html")
       interFaceB.x = 100
       sprites.mbB.x += sprites.mbB.width+100
       sprites.mbB.y -= 50*1.0000000
@@ -166,11 +148,7 @@ const $html = document.documentElement;
       sprites.spawnB.y -= 50*1.0000000
       
   
-<<<<<<< HEAD
       textB.x = window.clientWidth/2
-=======
-      textB.x = window.innerWidth/2
->>>>>>> parent of d375a52 (Revert "Update wtf.html")
       textB.anchor.x = 0.5
       textB.anchor.y = 0.5
       textB.y = line.y+line.height+100
@@ -181,22 +159,14 @@ const $html = document.documentElement;
       interFaceR.addChild(sprites.mbR)
       interFaceR.addChild(sprites.spawnR)
       interFaceR.y = 100
-<<<<<<< HEAD
       interFaceR.x = window.clientWidth - interFaceR.width - 100
-=======
-      interFaceR.x = window.innerWidth - interFaceR.width - 100
->>>>>>> parent of d375a52 (Revert "Update wtf.html")
       sprites.mbR.x -= (sprites.mbR.width+ 100)
       sprites.spawnR.x -= (sprites.mbR.width*2+ 200)
 
       
 
       app.stage.addChild(textR)
-<<<<<<< HEAD
       textR.x = window.clientWidth/2
-=======
-      textR.x = window.innerWidth/2
->>>>>>> parent of d375a52 (Revert "Update wtf.html")
       textR.anchor.x = 0.5
       textR.anchor.y = 0.5
       textR.y = line.y-100
@@ -239,19 +209,11 @@ const $html = document.documentElement;
            builder.height *= 1.000000
            builder.width *= 1.000000
            builder.team = 'B'
-<<<<<<< HEAD
            builder.x = getRandomInt(builder.width, window.clientWidth*1 - builder.width)
            builder.y = getRandomInt(line.y+line.height*1.0000000+100*1.0000000, window.clientHeight-300*1.0000000)
            while (CheckCollision(builder.x, builder.y, builder.width, builder.height) != false) {  
             builder.x = getRandomInt(builder.width, window.clientWidth*1 - builder.width)
            builder.y = getRandomInt(line.y+line.height*1.0000000+100*1.0000000, window.clientHeight-300*1.0000000)
-=======
-           builder.x = getRandomInt(builder.width, window.innerWidth*1 - builder.width)
-           builder.y = getRandomInt(line.y+line.height*1.0000000+100*1.0000000, window.innerHeight-300*1.0000000)
-           while (CheckCollision(builder.x, builder.y, builder.width, builder.height) != false) {  
-            builder.x = getRandomInt(builder.width, window.innerWidth*1 - builder.width)
-           builder.y = getRandomInt(line.y+line.height*1.0000000+100*1.0000000, window.innerHeight-300*1.0000000)
->>>>>>> parent of d375a52 (Revert "Update wtf.html")
           
            }
            console.log(builder.y)
@@ -275,17 +237,10 @@ const $html = document.documentElement;
            builder.height *= 1.000000
            builder.width *= 1.000000
            builder.team = 'R'
-<<<<<<< HEAD
            builder.x = getRandomInt(builder.width, window.clientWidth*1 - builder.width)
            builder.y = getRandomInt(300*1.0000000, line.y-100*1.0000000)
            while (CheckCollision(builder.x, builder.y, builder.width, builder.height) != false) {  
             builder.x = getRandomInt(builder.width, window.clientWidth*1 - builder.width)
-=======
-           builder.x = getRandomInt(builder.width, window.innerWidth*1 - builder.width)
-           builder.y = getRandomInt(300*1.0000000, line.y-100*1.0000000)
-           while (CheckCollision(builder.x, builder.y, builder.width, builder.height) != false) {  
-            builder.x = getRandomInt(builder.width, window.innerWidth*1 - builder.width)
->>>>>>> parent of d375a52 (Revert "Update wtf.html")
            builder.y = getRandomInt(300*1.0000000, line.y-100*1.0000000)
            }
            console.log(builder.y)
@@ -310,17 +265,10 @@ const $html = document.documentElement;
            spawner.width *= 1.000000
            spawner.team = 'R'
            spawner.time = 180
-<<<<<<< HEAD
            spawner.x = getRandomInt(spawner.width, window.clientWidth*1 - spawner.width)
            spawner.y = getRandomInt(300*1.0000000, line.y-100*1.0000000)
            while (CheckCollision(spawner.x, spawner.y, spawner.width, spawner.height) != false) { 
             spawner.x = getRandomInt(spawner.width, window.clientWidth*1 - spawner.width)
-=======
-           spawner.x = getRandomInt(spawner.width, window.innerWidth*1 - spawner.width)
-           spawner.y = getRandomInt(300*1.0000000, line.y-100*1.0000000)
-           while (CheckCollision(spawner.x, spawner.y, spawner.width, spawner.height) != false) { 
-            spawner.x = getRandomInt(spawner.width, window.innerWidth*1 - spawner.width)
->>>>>>> parent of d375a52 (Revert "Update wtf.html")
            spawner.y = getRandomInt(300*1.0000000, line.y-100*1.0000000)
            }
 
@@ -345,19 +293,11 @@ const $html = document.documentElement;
            spawner.team = 'B'
            spawner.time = 180
            
-<<<<<<< HEAD
            spawner.x = getRandomInt(spawner.width, window.clientWidth*1 - spawner.width)
            spawner.y = getRandomInt(line.y+line.height*1.0000000+100*1.0000000, window.clientHeight-300*1.0000000)
            while (CheckCollision(spawner.x, spawner.y, spawner.width, spawner.height) != false) {
             spawner.x = getRandomInt(spawner.width, window.clientWidth*1 - spawner.width)
             spawner.y = getRandomInt(line.y+line.height*1.0000000+100*1.0000000, window.clientHeight-300*1.0000000)
-=======
-           spawner.x = getRandomInt(spawner.width, window.innerWidth*1 - spawner.width)
-           spawner.y = getRandomInt(line.y+line.height*1.0000000+100*1.0000000, window.innerHeight-300*1.0000000)
-           while (CheckCollision(spawner.x, spawner.y, spawner.width, spawner.height) != false) {
-            spawner.x = getRandomInt(spawner.width, window.innerWidth*1 - spawner.width)
-            spawner.y = getRandomInt(line.y+line.height*1.0000000+100*1.0000000, window.innerHeight-300*1.0000000)
->>>>>>> parent of d375a52 (Revert "Update wtf.html")
            }
            spawners.push(spawner)
            unitsScene.addChild(spawners[spawners.length-1])
@@ -428,11 +368,7 @@ const $html = document.documentElement;
     function spawnShipR(x, y) {
       let ship = createShipR()
       
-<<<<<<< HEAD
       ship.x = x || getRandomInt(0, window.clientWidth*1 - ship.width)
-=======
-      ship.x = x || getRandomInt(0, window.innerWidth*1 - ship.width)
->>>>>>> parent of d375a52 (Revert "Update wtf.html")
       ship.ax = 0
       ship.ay = 0.5
       ship.speedX = 0
@@ -452,20 +388,12 @@ const $html = document.documentElement;
     }
     function spawnShipB(x,y) {
       let ship = createShipB()
-<<<<<<< HEAD
       ship.x = x || getRandomInt(ship.width, window.clientWidth*1 - ship.width)
-=======
-      ship.x = x || getRandomInt(ship.width, window.innerWidth*1 - ship.width)
->>>>>>> parent of d375a52 (Revert "Update wtf.html")
       ship.ax = 0
       ship.ay = -0.5
       ship.speedX = 0
       ship.speedY = -1
-<<<<<<< HEAD
       ship.y = y || window.clientHeight*1 - ship.height
-=======
-      ship.y = y || window.innerHeight*1 - ship.height
->>>>>>> parent of d375a52 (Revert "Update wtf.html")
 
       units.push(ship)
       unitsScene.addChild(units[units.length-1])
@@ -564,13 +492,8 @@ const $html = document.documentElement;
         let finaly = new PIXI.Text('BLUE WIN', finallyR);
         finaly.anchor.x = 0.5
         finaly.anchor.y = 0.5
-<<<<<<< HEAD
         finaly.x = window.clientWidth/2
         finaly.y = window.clientHeight/2
-=======
-        finaly.x = window.innerWidth/2
-        finaly.y = window.innerHeight/2
->>>>>>> parent of d375a52 (Revert "Update wtf.html")
         finaly.rotation = 1.55
 
         app.stage.removeChild(interFaceB)
@@ -584,11 +507,7 @@ const $html = document.documentElement;
         return
       } 
 
-<<<<<<< HEAD
       if (line.y+line.height > window.clientHeight-sprites.addR.height-100) {
-=======
-      if (line.y+line.height > window.innerHeight-sprites.addR.height-100) {
->>>>>>> parent of d375a52 (Revert "Update wtf.html")
         console.log("game Over")
 
         const finallyR = new PIXI.TextStyle({fill: "#D24B4B",
@@ -599,13 +518,8 @@ const $html = document.documentElement;
 
         finaly.anchor.x = 0.5
         finaly.anchor.y = 0.5
-<<<<<<< HEAD
         finaly.x = window.clientWidth/2
         finaly.y = window.clientHeight/2
-=======
-        finaly.x = window.innerWidth/2
-        finaly.y = window.innerHeight/2
->>>>>>> parent of d375a52 (Revert "Update wtf.html")
         finaly.rotation = 1.55
 
         app.stage.removeChild(interFaceB)
