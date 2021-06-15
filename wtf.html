@@ -49,12 +49,17 @@ const $html = document.documentElement;
     let app = new PIXI.Application({
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       width: window.clientWidth,
       height: window.clientHeight,
 =======
       width: window.innerWidth,
       height: window.innerHeight,
 >>>>>>> parent of d375a52 (Revert "Update wtf.html")
+=======
+      width: realWidth,
+      height: realHeight,
+>>>>>>> parent of 53ce67a (Revert "Revert "Update wtf.html"")
 =======
       width: realWidth,
       height: realHeight,
@@ -69,12 +74,17 @@ const $html = document.documentElement;
     //подгон под реальный размер css
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
    // app.view.style.width = `${window.clientWidth}px`
     // app.view.style.height = `${window.clientHeight}px`
 =======
    // app.view.style.width = `${window.innerWidth}px`
     // app.view.style.height = `${window.innerHeight}px`
 >>>>>>> parent of d375a52 (Revert "Update wtf.html")
+=======
+    app.view.style.width = `${window.innerWidth}px`
+    app.view.style.height = `${window.innerHeight}px`
+>>>>>>> parent of 53ce67a (Revert "Revert "Update wtf.html"")
 =======
     app.view.style.width = `${window.innerWidth}px`
     app.view.style.height = `${window.innerHeight}px`
@@ -152,10 +162,14 @@ const $html = document.documentElement;
       line = sprites.line
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       line.y = window.clientHeight/2-line.height/2
 =======
       line.y = window.innerHeight/2-line.height/2
 >>>>>>> parent of d375a52 (Revert "Update wtf.html")
+=======
+      line.y = realHeight/2-line.height/2
+>>>>>>> parent of 53ce67a (Revert "Revert "Update wtf.html"")
 =======
       line.y = realHeight/2-line.height/2
 >>>>>>> parent of 53ce67a (Revert "Revert "Update wtf.html"")
@@ -170,10 +184,14 @@ const $html = document.documentElement;
       app.stage.addChild(textB)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       interFaceB.y = window.clientHeight - 200*1.0000000 - 100
 =======
       interFaceB.y = window.innerHeight - 200*1.0000000 - 100
 >>>>>>> parent of d375a52 (Revert "Update wtf.html")
+=======
+      interFaceB.y = realHeight - 200*window.devicePixelRatio - 100
+>>>>>>> parent of 53ce67a (Revert "Revert "Update wtf.html"")
 =======
       interFaceB.y = realHeight - 200*window.devicePixelRatio - 100
 >>>>>>> parent of 53ce67a (Revert "Revert "Update wtf.html"")
@@ -186,10 +204,14 @@ const $html = document.documentElement;
   
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       textB.x = window.clientWidth/2
 =======
       textB.x = window.innerWidth/2
 >>>>>>> parent of d375a52 (Revert "Update wtf.html")
+=======
+      textB.x = realWidth/2
+>>>>>>> parent of 53ce67a (Revert "Revert "Update wtf.html"")
 =======
       textB.x = realWidth/2
 >>>>>>> parent of 53ce67a (Revert "Revert "Update wtf.html"")
@@ -205,10 +227,14 @@ const $html = document.documentElement;
       interFaceR.y = 100
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       interFaceR.x = window.clientWidth - interFaceR.width - 100
 =======
       interFaceR.x = window.innerWidth - interFaceR.width - 100
 >>>>>>> parent of d375a52 (Revert "Update wtf.html")
+=======
+      interFaceR.x = realWidth - interFaceR.width - 100
+>>>>>>> parent of 53ce67a (Revert "Revert "Update wtf.html"")
 =======
       interFaceR.x = realWidth - interFaceR.width - 100
 >>>>>>> parent of 53ce67a (Revert "Revert "Update wtf.html"")
@@ -220,10 +246,14 @@ const $html = document.documentElement;
       app.stage.addChild(textR)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       textR.x = window.clientWidth/2
 =======
       textR.x = window.innerWidth/2
 >>>>>>> parent of d375a52 (Revert "Update wtf.html")
+=======
+      textR.x = realWidth/2
+>>>>>>> parent of 53ce67a (Revert "Revert "Update wtf.html"")
 =======
       textR.x = realWidth/2
 >>>>>>> parent of 53ce67a (Revert "Revert "Update wtf.html"")
@@ -271,6 +301,7 @@ const $html = document.documentElement;
            builder.team = 'B'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
            builder.x = getRandomInt(builder.width, window.clientWidth*1 - builder.width)
            builder.y = getRandomInt(line.y+line.height*1.0000000+100*1.0000000, window.clientHeight-300*1.0000000)
            while (CheckCollision(builder.x, builder.y, builder.width, builder.height) != false) {  
@@ -283,6 +314,13 @@ const $html = document.documentElement;
             builder.x = getRandomInt(builder.width, window.innerWidth*1 - builder.width)
            builder.y = getRandomInt(line.y+line.height*1.0000000+100*1.0000000, window.innerHeight-300*1.0000000)
 >>>>>>> parent of d375a52 (Revert "Update wtf.html")
+=======
+           builder.x = getRandomInt(builder.width, window.innerWidth*devicePixelRatio - builder.width)
+           builder.y = getRandomInt(line.y+line.height*window.devicePixelRatio+100*window.devicePixelRatio, realHeight-300*window.devicePixelRatio)
+           while (CheckCollision(builder.x, builder.y, builder.width, builder.height) != false) {  
+            builder.x = getRandomInt(builder.width, window.innerWidth*devicePixelRatio - builder.width)
+           builder.y = getRandomInt(line.y+line.height*window.devicePixelRatio+100*window.devicePixelRatio, realHeight-300*window.devicePixelRatio)
+>>>>>>> parent of 53ce67a (Revert "Revert "Update wtf.html"")
 =======
            builder.x = getRandomInt(builder.width, window.innerWidth*devicePixelRatio - builder.width)
            builder.y = getRandomInt(line.y+line.height*window.devicePixelRatio+100*window.devicePixelRatio, realHeight-300*window.devicePixelRatio)
@@ -315,6 +353,7 @@ const $html = document.documentElement;
            builder.team = 'R'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
            builder.x = getRandomInt(builder.width, window.clientWidth*1 - builder.width)
            builder.y = getRandomInt(300*1.0000000, line.y-100*1.0000000)
            while (CheckCollision(builder.x, builder.y, builder.width, builder.height) != false) {  
@@ -326,6 +365,13 @@ const $html = document.documentElement;
             builder.x = getRandomInt(builder.width, window.innerWidth*1 - builder.width)
 >>>>>>> parent of d375a52 (Revert "Update wtf.html")
            builder.y = getRandomInt(300*1.0000000, line.y-100*1.0000000)
+=======
+           builder.x = getRandomInt(builder.width, window.innerWidth*devicePixelRatio - builder.width)
+           builder.y = getRandomInt(300*window.devicePixelRatio, line.y-100*window.devicePixelRatio)
+           while (CheckCollision(builder.x, builder.y, builder.width, builder.height) != false) {  
+            builder.x = getRandomInt(builder.width, window.innerWidth*devicePixelRatio - builder.width)
+           builder.y = getRandomInt(300*window.devicePixelRatio, line.y-100*window.devicePixelRatio)
+>>>>>>> parent of 53ce67a (Revert "Revert "Update wtf.html"")
 =======
            builder.x = getRandomInt(builder.width, window.innerWidth*devicePixelRatio - builder.width)
            builder.y = getRandomInt(300*window.devicePixelRatio, line.y-100*window.devicePixelRatio)
@@ -358,6 +404,7 @@ const $html = document.documentElement;
            spawner.time = 180
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
            spawner.x = getRandomInt(spawner.width, window.clientWidth*1 - spawner.width)
            spawner.y = getRandomInt(300*1.0000000, line.y-100*1.0000000)
            while (CheckCollision(spawner.x, spawner.y, spawner.width, spawner.height) != false) { 
@@ -369,6 +416,13 @@ const $html = document.documentElement;
             spawner.x = getRandomInt(spawner.width, window.innerWidth*1 - spawner.width)
 >>>>>>> parent of d375a52 (Revert "Update wtf.html")
            spawner.y = getRandomInt(300*1.0000000, line.y-100*1.0000000)
+=======
+           spawner.x = getRandomInt(spawner.width, window.innerWidth*devicePixelRatio - spawner.width)
+           spawner.y = getRandomInt(300*window.devicePixelRatio, line.y-100*window.devicePixelRatio)
+           while (CheckCollision(spawner.x, spawner.y, spawner.width, spawner.height) != false) { 
+            spawner.x = getRandomInt(spawner.width, window.innerWidth*devicePixelRatio - spawner.width)
+           spawner.y = getRandomInt(300*window.devicePixelRatio, line.y-100*window.devicePixelRatio)
+>>>>>>> parent of 53ce67a (Revert "Revert "Update wtf.html"")
 =======
            spawner.x = getRandomInt(spawner.width, window.innerWidth*devicePixelRatio - spawner.width)
            spawner.y = getRandomInt(300*window.devicePixelRatio, line.y-100*window.devicePixelRatio)
@@ -401,6 +455,7 @@ const $html = document.documentElement;
            
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
            spawner.x = getRandomInt(spawner.width, window.clientWidth*1 - spawner.width)
            spawner.y = getRandomInt(line.y+line.height*1.0000000+100*1.0000000, window.clientHeight-300*1.0000000)
            while (CheckCollision(spawner.x, spawner.y, spawner.width, spawner.height) != false) {
@@ -413,6 +468,13 @@ const $html = document.documentElement;
             spawner.x = getRandomInt(spawner.width, window.innerWidth*1 - spawner.width)
             spawner.y = getRandomInt(line.y+line.height*1.0000000+100*1.0000000, window.innerHeight-300*1.0000000)
 >>>>>>> parent of d375a52 (Revert "Update wtf.html")
+=======
+           spawner.x = getRandomInt(spawner.width, window.innerWidth*devicePixelRatio - spawner.width)
+           spawner.y = getRandomInt(line.y+line.height*window.devicePixelRatio+100*window.devicePixelRatio, realHeight-300*window.devicePixelRatio)
+           while (CheckCollision(spawner.x, spawner.y, spawner.width, spawner.height) != false) {
+            spawner.x = getRandomInt(spawner.width, window.innerWidth*devicePixelRatio - spawner.width)
+            spawner.y = getRandomInt(line.y+line.height*window.devicePixelRatio+100*window.devicePixelRatio, realHeight-300*window.devicePixelRatio)
+>>>>>>> parent of 53ce67a (Revert "Revert "Update wtf.html"")
 =======
            spawner.x = getRandomInt(spawner.width, window.innerWidth*devicePixelRatio - spawner.width)
            spawner.y = getRandomInt(line.y+line.height*window.devicePixelRatio+100*window.devicePixelRatio, realHeight-300*window.devicePixelRatio)
@@ -493,10 +555,14 @@ const $html = document.documentElement;
       
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       ship.x = x || getRandomInt(0, window.clientWidth*1 - ship.width)
 =======
       ship.x = x || getRandomInt(0, window.innerWidth*1 - ship.width)
 >>>>>>> parent of d375a52 (Revert "Update wtf.html")
+=======
+      ship.x = x || getRandomInt(0, window.innerWidth*devicePixelRatio - ship.width)
+>>>>>>> parent of 53ce67a (Revert "Revert "Update wtf.html"")
 =======
       ship.x = x || getRandomInt(0, window.innerWidth*devicePixelRatio - ship.width)
 >>>>>>> parent of 53ce67a (Revert "Revert "Update wtf.html"")
@@ -523,10 +589,14 @@ const $html = document.documentElement;
       let ship = createShipB()
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       ship.x = x || getRandomInt(ship.width, window.clientWidth*1 - ship.width)
 =======
       ship.x = x || getRandomInt(ship.width, window.innerWidth*1 - ship.width)
 >>>>>>> parent of d375a52 (Revert "Update wtf.html")
+=======
+      ship.x = x || getRandomInt(ship.width, window.innerWidth*devicePixelRatio - ship.width)
+>>>>>>> parent of 53ce67a (Revert "Revert "Update wtf.html"")
 =======
       ship.x = x || getRandomInt(ship.width, window.innerWidth*devicePixelRatio - ship.width)
 >>>>>>> parent of 53ce67a (Revert "Revert "Update wtf.html"")
@@ -536,10 +606,14 @@ const $html = document.documentElement;
       ship.speedY = -1
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       ship.y = y || window.clientHeight*1 - ship.height
 =======
       ship.y = y || window.innerHeight*1 - ship.height
 >>>>>>> parent of d375a52 (Revert "Update wtf.html")
+=======
+      ship.y = y || window.innerHeight*devicePixelRatio - ship.height
+>>>>>>> parent of 53ce67a (Revert "Revert "Update wtf.html"")
 =======
       ship.y = y || window.innerHeight*devicePixelRatio - ship.height
 >>>>>>> parent of 53ce67a (Revert "Revert "Update wtf.html"")
@@ -643,12 +717,17 @@ const $html = document.documentElement;
         finaly.anchor.y = 0.5
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         finaly.x = window.clientWidth/2
         finaly.y = window.clientHeight/2
 =======
         finaly.x = window.innerWidth/2
         finaly.y = window.innerHeight/2
 >>>>>>> parent of d375a52 (Revert "Update wtf.html")
+=======
+        finaly.x = realWidth/2
+        finaly.y = realHeight/2
+>>>>>>> parent of 53ce67a (Revert "Revert "Update wtf.html"")
 =======
         finaly.x = realWidth/2
         finaly.y = realHeight/2
@@ -668,10 +747,14 @@ const $html = document.documentElement;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       if (line.y+line.height > window.clientHeight-sprites.addR.height-100) {
 =======
       if (line.y+line.height > window.innerHeight-sprites.addR.height-100) {
 >>>>>>> parent of d375a52 (Revert "Update wtf.html")
+=======
+      if (line.y+line.height > realHeight-sprites.addR.height-100) {
+>>>>>>> parent of 53ce67a (Revert "Revert "Update wtf.html"")
 =======
       if (line.y+line.height > realHeight-sprites.addR.height-100) {
 >>>>>>> parent of 53ce67a (Revert "Revert "Update wtf.html"")
@@ -687,12 +770,17 @@ const $html = document.documentElement;
         finaly.anchor.y = 0.5
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         finaly.x = window.clientWidth/2
         finaly.y = window.clientHeight/2
 =======
         finaly.x = window.innerWidth/2
         finaly.y = window.innerHeight/2
 >>>>>>> parent of d375a52 (Revert "Update wtf.html")
+=======
+        finaly.x = realWidth/2
+        finaly.y = realHeight/2
+>>>>>>> parent of 53ce67a (Revert "Revert "Update wtf.html"")
 =======
         finaly.x = realWidth/2
         finaly.y = realHeight/2
